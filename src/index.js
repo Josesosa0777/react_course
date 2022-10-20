@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import createRoot from 'react-dom/client';
+import App from "./components/App";
+
  
 const name = "Jose"
 const date = new Date();
@@ -21,26 +22,9 @@ if (hour < 12) {
   customStyle.color = "brown"
 }
 
-function Heading() {
-  return <h1>My favourite food</h1>
-}
 
 root.render(
   <div>
-    <h1 className="heading" spellCheck="false">Helloo {name}! </h1>
-    <p>Your lucky number is {10+Math.floor(Math.random()*10)}</p>
-    <ul>
-      <li>One</li>
-    </ul>
-    <Heading />
-    <img className="food-img" alt="random" src={img + "?grayscale"}/>
-    <p>Copyright {currentyear} at {date.getHours()}:{date.getMinutes()}</p>
-    <div>
-      <h1 style={{background: "red", fontSize: 34, margin: "1% 10%", padding: "30% 45%"}}>
-        Hello
-      </h1>
-      <h2 style={customStyle}>{greeting}</h2>
-    </div>
+    <App />
   </div>
-  
 );
