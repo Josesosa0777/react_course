@@ -1,3 +1,12 @@
+# Install NodeJS and NPM installed, 
+# Install ReactJS in your project's directory by running:
+### `npm install --save react react-dom``
+
+# Creating a ReactJS project:
+Create a new react project directory by running:
+### `npx create-react-app my-react-project`
+### `cd my-react-project`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
