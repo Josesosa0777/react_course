@@ -21,6 +21,9 @@ if (hour < 12) {
   customStyle.color = "brown"
 }
 
+function Heading() {
+  return <h1>My favourite food</h1>
+}
 
 root.render(
   <div>
@@ -29,7 +32,7 @@ root.render(
     <ul>
       <li>One</li>
     </ul>
-    <h1 className="heading" contentEditable="true" spellCheck="false">My favourite food</h1>
+    <Heading />
     <img className="food-img" alt="random" src={img + "?grayscale"}/>
     <p>Copyright {currentyear} at {date.getHours()}:{date.getMinutes()}</p>
     <div>
