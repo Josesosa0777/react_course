@@ -24,7 +24,5 @@ if (hour < 12) {
 
 
 root.render(
-  <div>
     <App />
-  </div>
 );
