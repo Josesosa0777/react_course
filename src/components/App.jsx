@@ -1,25 +1,17 @@
 import React from "react";
-import Entry from "./Entry";
-import emojipedia from "../emojipedia";
+import Login from "./Login";
 
-function createEntry(emojiTerm) {
-    return (
-        <Entry 
-            key={emojiTerm.id}
-            emoji={emojiTerm.emoji}
-            name={emojiTerm.name}
-            description={emojiTerm.description}
-        />
-    );
-}
+var isLoggedIn = false;
+
+const currentTime = new Date(2022, 11, 1, 9).getHours();
 
 function App() {
     return (
-        <div>
-            <h1>
-                <span>emojipedia</span>
-            </h1>
-            <dl className="dictionary">{emojipedia.map(createEntry)}</dl>
+        <div className="container">
+            {/*Ternary Operator*/}
+            {isLoggedIn ? <h1>Hello</h1> : <Login />}
+            {/*AND Operator*/}
+            {currentTime > 12 && <h1>Why are you still working?</h1>}
         </div>
     )
 }
