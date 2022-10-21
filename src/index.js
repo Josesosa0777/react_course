@@ -2,27 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App";
 
- 
-const name = "Jose"
-const date = new Date();
-const hour = date.getHours()
-const currentyear = date.getFullYear();
-const img = "https://picsum.photos/200"
-const customStyle = { color: "green" };
-
+function Card(props) {
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <img src={props.img} alt="avatar_img"/>
+      <p>{props.tel}</p>
+      <p>{props.email}</p>
+    </div>
+  )
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-let greeting = [];
-
-if (hour < 12) {
-  greeting = "good morning"
-  customStyle.color = "yellow"
-} else {
-  greeting = "good afternoon/night"
-  customStyle.color = "brown"
-}
-
-
 root.render(
-    <App />
+    <div>
+      <h1>My Contacts</h1>
+      <Card 
+      name="Beyonce" 
+      img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+      tel="+1 3456789876"
+      email="b@byonce.com"/>
+      <input id="fName" />
+    </div>
 );
